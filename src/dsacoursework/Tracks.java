@@ -26,14 +26,14 @@ public class Tracks {
     }
     
     public Tracks(int trackID, String trackTitle, String artist, int trackLength, String composer, String releaseDate, String album, String genre) {
-        trackID=this.trackID;
-        trackTitle=this.trackTitle;
-        artist=this.artist;
-        trackLength=this.trackLength;
-        composer=this.composer;
-        releaseDate=this.releaseDate;
-        album=this.album;
-        genre=this.genre;
+        this.trackID=trackID;
+        this.trackTitle=trackTitle;
+        this.artist=artist;
+        this.trackLength=trackLength;
+        this.composer=composer;
+        this.releaseDate=releaseDate;
+        this.album=album;
+        this.genre=genre;
     }
     
     public void setTrackID(int trackID) {
@@ -92,4 +92,16 @@ public class Tracks {
         return this.genre;
     }
     
+    
+    @Override
+    public String toString() {
+        return  "\nTrack ID: " + this.trackID + 
+                "\nTrack Title: " + this.trackTitle + 
+                "\nArtist: " + this.artist +
+                "\nTrack Length: " + this.trackLength/60 + " Minutes " + this.trackLength%60 + " Seconds" +
+                "\nComposer: " + this.composer +
+                "\nRelease Date: " + this.releaseDate +
+                "\nAlbum: " + this.album +
+                "\nGenre: " + this.genre;
+    }
 }
